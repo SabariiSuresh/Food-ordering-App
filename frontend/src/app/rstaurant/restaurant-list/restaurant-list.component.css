@@ -1,0 +1,57 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 30px;
+  background-color: #f8f8f8;
+}
+
+.restaurant-card {
+  cursor: pointer;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    height: 160px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .card-details {
+    padding: 16px;
+
+    .restaurant-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin: 0 0 6px 0;
+    }
+
+    .restaurant-address {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .restaurant-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #888;
+
+      mat-icon {
+        font-size: 16px;
+        color: #ff9800;
+        vertical-align: middle;
+        margin-right: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<mat-toolbar class="navbar">
+  <span class="logo" routerLink="/">🍴 <strong>FoodExpress</strong></span>
+
+  <span class="location">
+    <mat-icon>location_on</mat-icon> Kochi, Kerala
+  </span>
+
+  <span class="spacer"></span>
+
+  <nav class="nav-links">
+    <a *ngIf="isUser" mat-button routerLink="/restaurants">Restaurants</a>
+    <a *ngIf="isUser" mat-button routerLink="/cart">Cart</a>
+    <a *ngIf="isUser" mat-button routerLink="/order">Orders</a>
+
+    <a *ngIf="isAdmin" mat-button routerLink="/add-restaurant">Add Restaurant</a>
+    <a *ngIf="isAdmin" mat-button routerLink="/add-food/:restaurantId">Add Food</a>
+
+    <button mat-button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+    <a mat-button *ngIf="!isLoggedIn()" routerLink="/login">Login</a>
+  </nav>
+</mat-toolbar>
+
+
+<section class="category-section" *ngIf="showCategorySection">
+  <h2>What's on your mind?</h2>
+
+  <div class="category-list">
+    <div
+      *ngFor="let category of categories"
+      class="category-card"
+      (click)="filterByCategory(category.value)"
+    >
+      <img [src]="category.image" [alt]="category.viewValue" />
+      <p>{{ category.viewValue }}</p>
+    </div>
+  </div>
+</section>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

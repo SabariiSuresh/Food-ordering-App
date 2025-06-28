@@ -1,0 +1,162 @@
+/* Core Wrapper */
+.auth-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Left Hero Section */
+.welcome-section {
+  flex: 1.4;
+  position: relative;
+  background: url('https://images.pexels.com/photos/704767/pexels-photo-704767.jpeg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.welcome-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(252, 249, 247, 0.6));
+  z-index: 1;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 40px;
+  max-width: 400px;
+}
+
+.welcome-content h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+}
+
+.welcome-content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  opacity: 0.9;
+  line-height: 1.5;
+  
+}
+
+/* Right Login Section */
+.login-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff8f6;
+  padding: 48px 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.login-card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #ff5722;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.login-btn {
+  margin-top: 24px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  background-color: #ff5722;
+  transition: background 0.3s;
+}
+
+.message-container {
+  margin-top: 14px;
+  min-height: 32px;
+}
+
+.success-message {
+  color: #2e7d32;
+  font-weight: 600;
+  text-align: center;
+}
+
+.error-message {
+  color: #c62828;
+  font-weight: 600;
+  text-align: center;
+}
+
+.register-text {
+  margin-top: 24px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.register-text a {
+  color: #ff5722;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 950px) {
+  .auth-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .welcome-section {
+    height: 320px;
+    flex: none;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .welcome-content h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-content p {
+    font-size: 1.1rem;
+  }
+
+  .login-section {
+    padding: 32px 20px;
+  }
+
+  .login-card {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

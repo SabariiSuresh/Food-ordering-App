@@ -1,0 +1,35 @@
+<h2 class="cart-title">🛒 Your Cart</h2>
+
+<div class="cart-container" *ngIf="cart?.items?.length > 0; else emptyCart">
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cart.items">
+        <td>{{ item.food.name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>₹{{ item.food.price * item.quantity }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="cart-summary">
+    <p class="total"><strong>Total: ₹{{ total }}</strong></p>
+
+    <div class="cart-buttons">
+      <button mat-stroked-button color="warn" (click)="clearCart()">🗑 Clear Cart</button>
+      <button mat-flat-button color="primary" (click)="placeOrder()">✅ Place Order</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyCart>
+  <div class="empty-cart">
+    <p>Your cart is empty.</p>
+  </div>
+</ng-template>

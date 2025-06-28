@@ -1,0 +1,123 @@
+/* ─────── NAVBAR ─────── */
+.navbar {
+  background: #fff;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff5722;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  margin-left: 24px;
+  font-size: 15px;
+}
+
+.location mat-icon {
+  font-size: 18px;
+  color: #ff5722;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-links a,
+.nav-links button {
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+  background-color: #fff0e6;
+  color: #ff5722;
+}
+
+/* ─────── CATEGORY SECTION ─────── */
+.category-section {
+  padding: 32px 20px 24px;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.category-section h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+/* ─────── CATEGORY LIST ─────── */
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 110px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 87, 34, 0.25);
+}
+
+.category-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.category-card p {
+  margin: 0;
+  font-weight: 600;
+  color: #ff5722;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ─────── SIDENAV ─────── */
+.sidenav-container {
+  height: 100vh;
+}

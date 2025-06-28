@@ -1,0 +1,50 @@
+<div class="auth-wrapper">
+
+  <div class="welcome-section">
+    <div class="overlay"></div>
+    <div class="welcome-content">
+      <h1>Welcome to FoodExpress!</h1>
+      <p>Delicious meals delivered to your doorstep.</p>
+    </div>
+  </div>
+
+  <div class="login-section">
+    <mat-card class="login-card">
+      <h2>🔐 Login</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email" autocomplete="email" />
+          <mat-error *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+            Email is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password"
+            autocomplete="current-password" />
+          <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" type="button"
+            aria-label="Toggle password visibility">
+            <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+          <mat-error *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+
+        <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+        <button mat-flat-button color="primary" class="login-btn" type="submit"
+          [disabled]="loginForm.invalid">Login</button>
+
+      </form>
+
+      <p class="register-text">
+        Don't have an account? <a routerLink="/register">Register here</a>
+      </p>
+    </mat-card>
+  </div>
+
+</div>

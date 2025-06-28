@@ -1,0 +1,55 @@
+<div class="food-form-container">
+  <div class="form-card">
+    <h2><mat-icon>fastfood</mat-icon> Add New Food Item</h2>
+
+    <form [formGroup]="addFoodForm" (ngSubmit)="onsubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Food Name</mat-label>
+        <input matInput formControlName="name" placeholder="e.g. Chicken Biryani" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description" placeholder="Describe the dish"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category" placeholder="Select category">
+          <mat-option *ngFor="let cat of categories" [value]="cat.value">
+            {{cat.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+  <mat-label>Restaurant</mat-label>
+  <mat-select formControlName="restaurent" placeholder="Select restaurant">
+    <mat-option *ngFor="let r of restaurants" [value]="r._id">
+      {{ r.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Price (₹)</mat-label>
+        <input matInput type="number" formControlName="price" placeholder="e.g. 250" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Image URL</mat-label>
+        <input matInput formControlName="image" placeholder="Paste image link here" />
+      </mat-form-field>
+
+      <div class="form-actions">
+        <button mat-flat-button color="warn" [routerLink]="['/restaurants', restaurantId]">
+          <mat-icon>arrow_back</mat-icon> Back
+        </button>
+
+        <button mat-flat-button color="accent" type="submit">
+          <mat-icon>add</mat-icon> Add Food
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

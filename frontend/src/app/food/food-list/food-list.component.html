@@ -1,0 +1,17 @@
+<h2 class="menu-heading">🔥 Trending Dishes</h2>
+
+<div class="menu-grid">
+  <div class="food-card" *ngFor="let food of foods">
+    <div class="card-img">
+      <img [src]="food.image" alt="{{ food.name }}" />
+      <div class="overlay">
+        <h3 class="title">{{ food.name }}</h3>
+        <p class="desc">{{ food.description }}</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="price">₹{{ food.price }}</span>
+      <button mat-flat-button color="warn" (click)="addToCart(food._id)">Add to Cart</button>
+    </div>
+  </div>
+</div>

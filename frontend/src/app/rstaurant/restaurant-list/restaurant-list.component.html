@@ -1,0 +1,19 @@
+<div class="card-grid">
+  <mat-card
+    *ngFor="let rest of restaurants"
+    class="restaurant-card"
+    (click)="viewMenu(rest._id)"
+  >
+    <img mat-card-image [src]="rest.image" alt="{{ rest.name }}" />
+    
+    <mat-card-content class="card-details">
+      <h3 class="restaurant-name">{{ rest.name }}</h3>
+      <p class="restaurant-address">{{ rest.address }}</p>
+      <div class="restaurant-meta">
+        <span><mat-icon>star</mat-icon> 4.3</span>
+        <span>30 mins</span>
+        <span>₹200 for two</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

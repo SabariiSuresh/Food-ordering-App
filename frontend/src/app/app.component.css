@@ -1,0 +1,26 @@
+.splash-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.splash-loader::after {
+  content: "";
+  width: 64px;
+  height: 64px;
+  border: 6px solid #ff5722;       /* Primary brand color */
+  border-top-color: transparent;   /* Create spinning effect */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

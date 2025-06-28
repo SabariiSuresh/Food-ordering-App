@@ -1,0 +1,83 @@
+.food-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #fff, #f9f9f9);
+  min-height: 100vh;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  padding: 40px 32px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeInUp 0.3s ease;
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    mat-icon {
+      color: #ff5722;
+    }
+  }
+
+  mat-form-field {
+    width: 100%;
+    background-color: #fafafa;
+
+    .mat-form-field-outline {
+      border-radius: 10px;
+    }
+
+    input, textarea {
+      font-size: 15px;
+    }
+  }
+
+  textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    button {
+      border-radius: 50px;
+      padding: 10px 20px;
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(255, 87, 34, 0.2);
+      text-transform: uppercase;
+      min-width: 120px;
+
+      mat-icon {
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
