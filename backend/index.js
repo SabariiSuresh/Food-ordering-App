@@ -16,7 +16,7 @@ const indexRoutes = require('./routes/index.routes');
 app.use('/' , indexRoutes)
 
 connectDb().then(()=> {
-    app.listen(port , ()=> console.log("Server is running " , port))
+    app.listen(port , '0.0.0.0' , ()=> console.log("Server is running " , port))
 })
 .catch((error)=> console.error("Faild to connect server" , error));
 
