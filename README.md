@@ -86,8 +86,8 @@ npm install
 ng serve
 ```
 
-## Live Demo : 
-[click here to visit ] ( https://food-express-mauve.vercel.app )
+## 🌐 Live Demo : 
+[click here to visit] ( https://food-express-mauve.vercel.app )
 
 ---
 
