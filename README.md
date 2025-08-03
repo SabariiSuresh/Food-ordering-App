@@ -86,11 +86,6 @@ npm install
 ng serve
 ```
 
-## 🌐 Live Demo : 
-[click here to visit] https://food-express-mauve.vercel.app
-
----
-
 ## 🛡️ Environment Variables
 
 Create `.env` in `backend/` folder with the following:
