@@ -87,7 +87,7 @@ ng serve
 ```
 
 ## 🌐 Live Demo : 
-[click here to visit] ( https://food-express-mauve.vercel.app )
+[click here to visit] https://food-express-mauve.vercel.app
 
 ---
 
