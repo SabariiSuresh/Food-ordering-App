@@ -1,16 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { environment } from '../../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  private restaurantUrl = 'http://localhost:3000/restaurent'
-  private foodUrl = 'http://localhost:3000/food'
-  private cartUrl = 'http://localhost:3000/cart'
-  private placeOrderUrl = 'http://localhost:3000/order'
+  private restaurantUrl = environment.apiUrl+'/restaurent'
+  private foodUrl = environment.apiUrl+ '/food'
+  private cartUrl = environment.apiUrl+ '/cart'
+  private placeOrderUrl = environment.apiUrl+ '/order'
 
   private loadingSubject = new BehaviorSubject<boolean>(false);
   loading$ = this.loadingSubject.asObservable();
