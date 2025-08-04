@@ -86,10 +86,6 @@ npm install
 ng serve
 ```
 
-Visit: [http://localhost:4200](http://localhost:4200)
-
----
-
 ## 🛡️ Environment Variables
 
 Create `.env` in `backend/` folder with the following:
